@@ -11,3 +11,9 @@ body {
     cursor: pointer;
   }
   
+  img {
+    width: 300px; /* Makes all images 300px wide */
+    border-radius: 15px; /* Makes corners rounded */
+    margin: 20px; /* Adds space around the images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a light shadow */
+  }
