@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/*Add Smooth Scrolling in CSS*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
