@@ -163,3 +163,12 @@ img {
   font-size: 1.2rem;
   line-height: 1.6;
 }
+
+
+/* defines how the button will look when activated*/
+.clicked {
+  background-color: #ff0066;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+  color: white;
+}
