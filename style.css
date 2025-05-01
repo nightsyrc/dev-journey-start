@@ -1,7 +1,8 @@
 /* Reset default padding/margin for cleaner layout */
-* {
+*{
   margin: 0;
   padding: 0;
+/*makes width/height calculations easier by including padding and borders inside the element’s declared size.*/
   box-sizing: border-box;
 }
 
@@ -14,7 +15,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   min-height: 100vh;
   background-color: #f4f4f4;
 
@@ -58,10 +59,11 @@ nav ul li a:hover {
 /* Main content container */
 main {
   flex: 1;
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1500px;
   padding: 20px;
   text-align: center;
+  margin: 0 auto; /* center it */
 }
 
 /* Flexbox for images */
@@ -99,10 +101,10 @@ button {
 }
 
 img {
-  width: 300px; /* Makes all images 300px wide */
-  border-radius: 15px; /* Makes corners rounded */
-  margin: 20px; /* Adds space around the images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a light shadow */
+  max-width: 100%;
+  height: auto;       /* Scale images to fit their container */
+  margin: 0;          /* Remove extra margin on all images */
+  border-radius: 15px;
 }
 
 /*HERO SECTION - STYLE*/
@@ -179,9 +181,10 @@ img {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 1500px;
   text-align: center;
+  margin: 0 auto;
 }
 
 #messageInput{
@@ -201,7 +204,7 @@ img {
   cursor: pointer;
 }
 
-#messagesContainer {
+#messageContainer {
   margin-top: 20px;
   text-align: left;
 }
@@ -214,7 +217,7 @@ img {
   color: #333;
 }
 
-#projects-list {
+#project-list {
   margin-top: 60px;
   text-align: center;
 }
