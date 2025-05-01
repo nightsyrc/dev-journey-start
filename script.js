@@ -40,49 +40,41 @@ sendBtn.addEventListener("click", () => {
 //MY JAVASCRIPT PROJECTS SECTION
 //First we declare the Array:
 const projects = [
-//We start creating the objects:
-{
-  title:  "Dynamic Message Board",
-  description:  "Users can type and post messages live to the page.",
-  image:  "images/fsd_img_3.webp"
-},
-{
-  title:  "Simple Portfolio",
-  description:  "A personal site with my resume and GitHub links.",
-  image:  "images/fsd_img_4.jpg"
-},
-{
-  title:  "Js Clock",
-  description:  "A digital clock built purely with Javascript",
-  image:  "images/fsd_img_5.jpg"
-}
+  //We start creating the objects:
+  {
+    title: "Dynamic Message Board",
+    description: "Users can type and post messages live to the page.",
+    image: "images/fsd_img_3.webp",
+  },
+  {
+    title: "Simple Portfolio",
+    description: "A personal site with my resume and GitHub links.",
+    image: "images/fsd_img_4.jpg",
+  },
+  {
+    title: "Js Clock",
+    description: "A digital clock built purely with Javascript",
+    image: "images/fsd_img_5.jpg",
+  },
 ];
 
-//Declaramos el contenedor de las tarjetas y le referenciamos el elemento correspondiente en el DOM 
-// en este caso referenciando por ID al elemento projectCards
+// Get the container element from the DOM where project cards will be displayed
 const projectCardsContainer = document.getElementById("projectCards");
 
-//Uilizamos nuestro Array projects y decimos que por cada objecto en el array ejecute la siguiente funcion
+// Loop through the array of projects and create a visual card for each
 projects.forEach((project) => {
-
-  //We declare the object card and assign it the value of a newly created element in our DOM, in this case a div 
+  // Create a new <div> element to act as a card
   const card = document.createElement("div");
-  
-  //We assign the class "project-card" to our new card
+
+  // Set the inner HTML of the card with project info
+  // This includes an image, title, and description pulled from the object
   card.classList.add("project-card");
 
-  //We assign an innerHTML to our card object. 
-  card.innerHTML = 
-  
-  //here we build the inner HTML that will be added to the card object.
-  //first we start with a string that makes reference to an image location.
-  //then dinamically inject the value of our array object in reference to the 
-  // image element which reference an image location in the folder project
-  //Same with title and description. Both loaded from our array object.
-  `<img src="${project.image}" alt="${project.title}" />
+  card.innerHTML = `
+  <img src="${project.image}" alt="${project.title}" />
     <h3>${project.title}</h3>
     <p>${project.description}</p>
   `;
-  //Finally we append our Card object to our DOM container. 
+  // Append the completed card to the main container in the DOM
   projectCardsContainer.appendChild(card);
 });

@@ -228,6 +228,7 @@ img {
 }
 
 .project-card {
+  overflow: hidden; /* prevents image spillover */
   background-color: white;
   padding: 15px;
   border-radius: 12px;
@@ -238,6 +239,8 @@ img {
 
 .project-card img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
+  display: block;
+  object-fit: cover;
 }
