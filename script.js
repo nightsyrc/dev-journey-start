@@ -58,23 +58,43 @@ const projects = [
   },
 ];
 
-// Get the container element from the DOM where project cards will be displayed
 const projectCardsContainer = document.getElementById("projectCards");
+projects.forEach(project => {
+  const card = card_generator(project.title,project.description, project.image);
+  projectCardsContainer.append(card);
+})
 
-// Loop through the array of projects and create a visual card for each
-projects.forEach((project) => {
-  // Create a new <div> element to act as a card
+// // Get the container element from the DOM where project cards will be displayed
+// const projectCardsContainer = document.getElementById("projectCards");
+
+// // Loop through the array of projects and create a visual card for each
+// projects.forEach((project) => {
+//   // Create a new <div> element to act as a card
+//   const card = document.createElement("div");
+
+//   // Set the inner HTML of the card with project info
+//   // This includes an image, title, and description pulled from the object
+//   card.classList.add("project-card");
+
+//   card.innerHTML = `
+//   <img src="${project.image}" alt="${project.title}" />
+//     <h3>${project.title}</h3>
+//     <p>${project.description}</p>
+//   `;
+//   // Append the completed card to the main container in the DOM
+//   projectCardsContainer.appendChild(card);
+// }
+// );
+
+//CARD GENERATOR FUNCTION
+function card_generator (title,description,image){
   const card = document.createElement("div");
-
-  // Set the inner HTML of the card with project info
-  // This includes an image, title, and description pulled from the object
   card.classList.add("project-card");
 
-  card.innerHTML = `
-  <img src="${project.image}" alt="${project.title}" />
-    <h3>${project.title}</h3>
-    <p>${project.description}</p>
+card.innerHTML =   `
+    <h3>${title}</h3>
+    <p>${description}</p>
+    <img src="${image}" alt="${title}"/>
   `;
-  // Append the completed card to the main container in the DOM
-  projectCardsContainer.appendChild(card);
-});
+  return card;
+}
