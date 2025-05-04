@@ -1,21 +1,32 @@
+//TOGGLEABLE BUTTON
 // Find the button
 const myButton = document.querySelector("button");
-
 // Add a click event
 myButton.addEventListener("click", function () {
   myButton.classList.toggle("clicked");
 });
 
-// Logic for the Dynamic Message Board
+// Logic for the Dynamic DOM Message Board
 
 //First we declare our const vars by readin the elements from DOM referencing their ID value
 const sendBtn = document.getElementById("sendBtn");
 const messageInput = document.getElementById("messageInput");
 const messagesContainer = document.getElementById("messageContainer");
 
+//"Enter" key support for the inbox
+messageInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    message_generator();
+  }
+});
+
 // First we add a Listener to our sendBtn for the Click Event
 //  () => is an arrow function. shorthand for: function() { ... }
 sendBtn.addEventListener("click", () => {
+  message_generator();
+});
+
+function message_generator() {
   //We get the value from the <input> field, take the actual string and remve any spaces before after
   const msg = messageInput.value.trim();
 
@@ -35,9 +46,9 @@ sendBtn.addEventListener("click", () => {
 
   // Clear input
   messageInput.value = "";
-});
+}
 
-//MY JAVASCRIPT PROJECTS SECTION
+//PROJECTS CARD GENERATOR
 //First we declare the Array:
 const projects = [
   //We start creating the objects:
@@ -59,10 +70,14 @@ const projects = [
 ];
 
 const projectCardsContainer = document.getElementById("projectCards");
-projects.forEach(project => {
-  const card = card_generator(project.title,project.description, project.image);
+projects.forEach((project) => {
+  const card = card_generator(
+    project.title,
+    project.description,
+    project.image
+  );
   projectCardsContainer.append(card);
-})
+});
 
 // // Get the container element from the DOM where project cards will be displayed
 // const projectCardsContainer = document.getElementById("projectCards");
@@ -87,14 +102,55 @@ projects.forEach(project => {
 // );
 
 //CARD GENERATOR FUNCTION
-function card_generator (title,description,image){
+function card_generator(title, description, image) {
   const card = document.createElement("div");
   card.classList.add("project-card");
 
-card.innerHTML =   `
+  card.innerHTML = `
     <h3>${title}</h3>
     <p>${description}</p>
     <img src="${image}" alt="${title}"/>
   `;
   return card;
+}
+
+//GET PENDING TASKS FUNCTION
+
+const projects_data = [
+  {
+    name: "Website Redesign",
+    collaborators: ["Ana", "Luis", "Carlos"],
+    deadline: "2024-06-01",
+    tasks: [
+      { title: "Build wireframes", done: true },
+      { title: "Setup hosting", done: false },
+    ],
+  },
+  {
+    name: "Marketing Landing Page",
+    collaborators: ["María"],
+    deadline: "2024-05-10",
+    tasks: [
+      { title: "Write copy", done: true },
+      { title: "Design CTA", done: true },
+      { title: "Implement form", done: false },
+    ],
+  },
+];
+
+//PENDING TASKS FUNCTION
+function get_pending_tasks(projects_data) {
+  let projectNames = [];
+
+  projects_data.forEach((project) => {
+    const has_pending = project.tasks.some((task) => !task.done);
+
+    if (has_pending) {
+      projectNames.push(project.name);
+    }
+
+    //alert(projectNames);
+  });
+  console.table(projectNames);
+  return projectNames;
 }

@@ -4,6 +4,11 @@
   padding: 0;
 /*makes width/height calculations easier by including padding and borders inside the element’s declared size.*/
   box-sizing: border-box;
+  
+}
+
+h2 {
+  color: #00ff9c;
 }
 
 /*Add Smooth Scrolling in CSS*/
@@ -17,10 +22,20 @@ body {
   flex-direction: column;
   align-items: stretch;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
 
   /*Soft but modern color gradient background*/
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  
+  /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
+
+  /*background-color: #0e0e10;
+  background-image: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.05), transparent 30%),
+                    radial-gradient(circle at 70% 70%, rgba(255,0,255,0.05), transparent 30%);
+  backdrop-filter: blur(2px);*/
+
+  background: linear-gradient(to right, #111827, #1f2937, #111827);
+
+
 }
 
 /* Navbar styling */
@@ -145,8 +160,8 @@ img {
 
 /*SECTIONS*/
 .about {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
+  background-color: rgb(255 255 255 / 4%);
+    color: #fff3f3;
   padding: 60px 20px;
   width: 90%;
   max-width: 800px;
@@ -246,4 +261,17 @@ img {
   border-radius: 8px;
   display: block;
   object-fit: cover;
+}
+
+.study-plan{
+  text-align: center; 
+  padding: 2rem;
+}
+.study-button{
+  display: inline-block; 
+  padding: 1rem 2rem; 
+  background-color: #4CAF50; 
+  color: white; 
+  border-radius: 8px; 
+  text-decoration: none;
 }
