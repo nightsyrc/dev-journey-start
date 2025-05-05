@@ -154,3 +154,36 @@ function get_pending_tasks(projects_data) {
   console.table(projectNames);
   return projectNames;
 }
+
+
+const personalityTraits = [
+  {
+    title: "🧠 Strategic Thinker",
+    description:
+      "I love solving problems with logic and creativity. My ENTP brain thrives when exploring systems and patterns in tech.",
+  },
+  {
+    title: "💬 Adaptable Communicator",
+    description:
+      "As an extroverted intuitive, I connect ideas quickly and communicate them clearly — great for teamwork and user-centric dev.",
+  },
+  {
+    title: "⚡ Fast Learner & Challenger",
+    description:
+      "I question assumptions and adapt fast. This makes me naturally drawn to innovation and pushing boundaries in code.",
+  },
+];
+
+const personalityContainer = document.getElementById("personalityCards");
+
+personalityTraits.forEach((trait) => {
+  const card = document.createElement("div");
+  card.classList.add("personality-card");
+
+  card.innerHTML = `
+    <h3>${trait.title}</h3>
+    <p>${trait.description}</p>
+  `;
+
+  personalityContainer.appendChild(card);
+});
