@@ -36,6 +36,7 @@ body {
 
   background: linear-gradient(to right, #111827, #1f2937, #111827);
   /*background: linear-gradient(to right, #1f438e, #416197, #1f438e);*/
+}
 
 /* Navbar styling */
 nav {
@@ -380,4 +381,3 @@ img {
   }
 }
 
-}
