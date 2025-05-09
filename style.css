@@ -7,7 +7,7 @@
 }
 
 h2 {
-  color: #00ff9c;
+  color: #34ff73;
 }
 
 /*Add Smooth Scrolling in CSS*/
@@ -33,7 +33,7 @@ body {
   backdrop-filter: blur(2px);*/
 
   background: linear-gradient(to right, #111827, #1f2937, #111827);
-}
+  /*background: linear-gradient(to right, #1f438e, #416197, #1f438e);*/
 
 /* Navbar styling */
 nav {
@@ -143,8 +143,8 @@ img {
 
 .btn {
   padding: 10px 25px;
-  background-color: #ff4b2b;
-  color: white;
+  background-color: #32ff73;
+    color: #131b2a;
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 8px;
@@ -152,7 +152,8 @@ img {
 }
 
 .btn:hover {
-  background-color: #ff6f61;
+  background-color: #de43ec;
+  color: white;
 }
 
 /*SECTIONS*/
@@ -203,6 +204,7 @@ img {
   border: 3px solid #00ff99;
   flex-shrink: 0;
   object-position: -14px;
+  filter: brightness(100%) contrast(109%) saturate(122%);
 }
 
 .about-text {
@@ -337,4 +339,40 @@ img {
   border-radius: 50%;
   border: 2px solid #00ff99;
   flex-shrink: 0;
+}
+
+/*COMPANY CAROUSEL*/
+.company-carousel {
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 160px;
+  height: 100px;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
