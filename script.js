@@ -187,3 +187,7 @@ personalityTraits.forEach((trait) => {
 
   personalityContainer.appendChild(card);
 });
+
+
+
+  
