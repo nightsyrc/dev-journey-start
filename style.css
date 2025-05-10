@@ -22,30 +22,30 @@
   color: #4be3ff;
 }
 
-.cardTextHighlightBlue a, .cardTextHighlightYellow a, .cardTextHighlightPink a {
+.cardTextHighlightBlue a, .cardTextHighlightC a, .cardTextHighlightD a {
   text-decoration: none;
   color: inherit;
   font-weight: inherit;
 }
 
-.cardTextHighlightBlue a:hover, .cardTextHighlightYellow a:hover, .cardTextHighlightPink a:hover {
+.cardTextHighlightBlue a:hover, .cardTextHighlightC a:hover, .cardTextHighlightD a:hover {
   text-decoration: underline; /* optional hover style */
 }
 
-.cardTextHighlightYellow {
+.cardTextHighlightC {
   color: #fff3f3;
   font-size: 22px;
   background-color: #02c7ff3d;
-  color: #ebf262;
+  color: #00ffc4;
 }
 
 
 
-.cardTextHighlightPink {
+.cardTextHighlightD {
   color: #fff3f3;
   font-size: 22px;
-  background-color: #0002ff38;
-    color: #ff63d1;
+  background-color: #ff84d321;
+  color: #ff79f0;
 }
 
 
