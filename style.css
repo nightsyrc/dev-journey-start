@@ -7,8 +7,55 @@
   
 }
 
+/*HIGHTLIGHTING TEXT*/
+.cardTextHighlightGreen {
+  color: #fff3f3;
+  font-size: 26px;
+  background-color: #02ff9c26;
+  color: #4eff4b;
+}
+
+.cardTextHighlightBlue {
+  color: #fff3f3;
+  font-size: 22px;
+  background-color: #0265ff3d;
+  color: #4be3ff;
+}
+
+.cardTextHighlightBlue a, .cardTextHighlightYellow a, .cardTextHighlightPink a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.cardTextHighlightBlue a:hover, .cardTextHighlightYellow a:hover, .cardTextHighlightPink a:hover {
+  text-decoration: underline; /* optional hover style */
+}
+
+.cardTextHighlightYellow {
+  color: #fff3f3;
+  font-size: 22px;
+  background-color: #02c7ff3d;
+  color: #ebf262;
+}
+
+
+
+.cardTextHighlightPink {
+  color: #fff3f3;
+  font-size: 22px;
+  background-color: #0002ff38;
+    color: #ff63d1;
+}
+
+
+/*REMOVE HYPERLINK FORMATING*/
+
+
+
+
 h2 {
-  color: #34ff73;
+  color: #00ff4f;
 }
 
 /*Add Smooth Scrolling in CSS*/
@@ -172,12 +219,6 @@ img {
   text-align: center;
 }
 
-.cardTextHighlight {
-  color: #fff3f3;
-  font-size: 26px;
-  background-color: #02ff9c3d;
-  color: #4eff4b;
-}
 
 .section h2 {
   font-size: 2.5rem;
@@ -192,7 +233,7 @@ img {
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -204,7 +245,7 @@ img {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #00ff99;
+  border: 3px solid #02ff4f;
   flex-shrink: 0;
   object-position: -14px;
   filter: brightness(100%) contrast(109%) saturate(122%);
@@ -242,7 +283,7 @@ img {
   padding: 10px;
   width: 40%;
   margin-right: 10px;
-  border-radius: 5;
+  border-radius: 5px;
   border: 1px solid #ccc;
 }
 
@@ -348,18 +389,20 @@ img {
 .carousel-track {
   overflow: hidden;
   width: 100%;
+  height: 140px;
   background: transparent;
 }
 
 .carousel-content {
   display: flex;
   animation: scroll-left 30s linear infinite;
+  height: inherit;
 }
 
 .carousel-card {
   flex: 0 0 auto;
-  width: 160px;
-  height: 100px;
+  width: 250px;
+  height: 100%;
   margin-right: 30px;
   display: flex;
   align-items: center;
@@ -367,7 +410,7 @@ img {
 }
 
 .carousel-card img {
-  max-height: 80px;
+  max-height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
