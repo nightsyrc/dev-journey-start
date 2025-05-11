@@ -246,7 +246,7 @@ img {
   border: 3px solid #02ff4f;
   flex-shrink: 0;
   object-position: -14px;
-  background-color: #07777c;
+  background-color: #112934;
   filter: brightness(103%) contrast(105%) saturate(110%);
 }
 
@@ -354,7 +354,6 @@ img {
 
 #personality-profile {
   margin-top: 60px;
-  text-align: center;
 }
 
 #personalityCards {
@@ -474,4 +473,42 @@ img {
       minmax(80px, 1fr)
     ); /* Smaller logos on smaller screens */
   }
+}
+
+#personality-highlights {
+  padding: 60px 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.highlight-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.highlight-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff3f3;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.highlight-card h3 {
+  margin-bottom: 10px;
+  color: #adf3ff;
+  font-size: 1.2rem;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.12);
 }
