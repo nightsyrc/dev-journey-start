@@ -1,8 +1,8 @@
 # 💻 Cristian's Developer Portfolio
 
-Welcome to my interactive developer portfolio — a custom-built, responsive web app that highlights my journey from SaaS operations and support to full-stack development. This project reflects my technical growth, personality, and commitment to learning by building.
+Welcome to my interactive developer portfolio — a custom-built, responsive web app that highlights my journey from SaaS operations and support to full-stack development. This project reflects my technical growgit ath, personality, and commitment to learning by building.
 
-![Screenshot](./images/readmePic.png.png)
+![Screenshot](./images/readmePic.png)
 
 ---
 
