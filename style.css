@@ -4,7 +4,6 @@
   padding: 0;
   /*makes width/height calculations easier by including padding and borders inside the element’s declared size.*/
   box-sizing: border-box;
-  
 }
 
 /*HIGHTLIGHTING TEXT*/
@@ -22,13 +21,17 @@
   color: #4be3ff;
 }
 
-.cardTextHighlightBlue a, .cardTextHighlightC a, .cardTextHighlightD a {
+.cardTextHighlightBlue a,
+.cardTextHighlightC a,
+.cardTextHighlightD a {
   text-decoration: none;
   color: inherit;
   font-weight: inherit;
 }
 
-.cardTextHighlightBlue a:hover, .cardTextHighlightC a:hover, .cardTextHighlightD a:hover {
+.cardTextHighlightBlue a:hover,
+.cardTextHighlightC a:hover,
+.cardTextHighlightD a:hover {
   text-decoration: underline; /* optional hover style */
 }
 
@@ -39,8 +42,6 @@
   color: #00ffc4;
 }
 
-
-
 .cardTextHighlightD {
   color: #fff3f3;
   font-size: 22px;
@@ -48,11 +49,7 @@
   color: #ff79f0;
 }
 
-
 /*REMOVE HYPERLINK FORMATING*/
-
-
-
 
 h2 {
   color: #00ff4f;
@@ -64,25 +61,26 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+ font-family: 'Tinosk', sans-serif;
+ font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
   min-height: 100vh;
   color: #fff3f3;
-  /*background-color: #f4f4f4;*/
 
-  /*Soft but modern color gradient background*/
-
-  /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
-
-  /*background-color: #0e0e10;
-  background-image: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.05), transparent 30%),
-                    radial-gradient(circle at 70% 70%, rgba(255,0,255,0.05), transparent 30%);
-  backdrop-filter: blur(2px);*/
 
   background: linear-gradient(to right, #111827, #1f2937, #111827);
-  /*background: linear-gradient(to right, #1f438e, #416197, #1f438e);*/
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 /* Navbar styling */
@@ -194,7 +192,7 @@ img {
 .btn {
   padding: 10px 25px;
   background-color: #32ff73;
-    color: #131b2a;
+  color: #131b2a;
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 8px;
@@ -210,19 +208,19 @@ img {
 .section {
   background-color: rgb(255 255 255 / 4%);
   color: #fff3f3;
-  padding: 60px 20px;
+  padding: 25px 20px;
   width: 90%;
   max-width: 800px;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   margin: 40px auto;
-  text-align: center;
+  text-align: end;
 }
-
 
 .section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .section p {
@@ -248,7 +246,8 @@ img {
   border: 3px solid #02ff4f;
   flex-shrink: 0;
   object-position: -14px;
-  filter: brightness(100%) contrast(109%) saturate(122%);
+  background-color: #171b20;
+  filter: brightness(103%) contrast(105%) saturate(110%);
 }
 
 .about-text {
@@ -424,3 +423,55 @@ img {
   }
 }
 
+/* Main container for the tech stack logos */
+.techStackLogos {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the individual logo cards */
+.techStackLogos-content {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px; /* Spacing between the logos */
+  max-width: 100%; /* Limit the width of the container */
+  padding: 10px;
+}
+
+/* Each card that holds a logo */
+.techStackLogos-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5; /* Light background for cards */
+  border-radius: 8px; /* Rounded corners for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside each card */
+.techStackLogos-card img {
+  width: 100%;
+  height: auto;
+  max-width: 120px; /* Ensures logos don't get too large */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Hover effect for the cards */
+.techStackLogos-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .techStackLogos-content {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(80px, 1fr)
+    ); /* Smaller logos on smaller screens */
+  }
+}
