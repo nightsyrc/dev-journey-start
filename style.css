@@ -512,3 +512,7 @@ img {
   transform: translateY(-5px);
   background-color: rgba(255, 255, 255, 0.12);
 }
+
+.heroName {
+  color: #5affbf;
+}
