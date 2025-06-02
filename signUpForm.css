@@ -1,0 +1,59 @@
+.formContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.right {
+  flex: 1.5;
+  background-color: #070f16;
+  padding: 40px 70px 0px 60px;
+}
+
+.left {
+  display: flex;
+  height: 100vh;
+  flex: 1;
+  background-image: url("images/bg3.jpg");    
+  background-size: cover;
+  background-position: center;
+    align-items: center;
+      background-color: rgba(0, 0, 0, 0.9); /* Black with 50% transparency */
+  filter: grayscale(55%);
+}
+
+.transparentBox {
+  display: flex;
+  flex: 1;
+  background-color: #acbbcb89;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+   font-family: "Miss Fajardose", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.formNameInputContainer, .formContactInputContainer, .passwordContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.signUpFormInput {
+  flex: 1;
+  height: 50px;
+  font-size: large;
+  color:#5affbe;
+  background-color: #0000006e;
+      padding: 0px 0px 0px 10px;
+
+}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formNameContainer, .formContactContainer, .formPasswordContainer {
+    padding:  0px 0px 20px 0px;
+}

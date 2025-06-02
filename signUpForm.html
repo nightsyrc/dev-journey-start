@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Cristian's Dev Journey Sign Up Form</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="signUpForm.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +22,7 @@
   </head>
 
   <body>
-    <div class="signUpFormContainer">
+    <div class="formContainer">
       <div class="left">
         <div class="transparentBox">
           <div id="signupBackgroundName">Cristian Melendez</div>
@@ -40,32 +41,71 @@
         </p>
         <br />
 
-        <form>
-          <div>Name:</div>
-          <div class="signUpFormNameContainer">
-            <input type="text" id="firstNameInput" placeholder="First Name" />
-            <input type="text" id="lastNameInput" placeholder="Last Name" />
+        <form class="signUpForm" id="signUpForm">
+          <div class="formNameContainer">
+            <div>Name:</div>
+            <div class="formNameInputContainer">
+              <input
+                type="text"
+                class="signUpFormInput"
+                id="firstNameInput"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                class="signUpFormInput"
+                id="lastNameInput"
+                placeholder="Last Name"
+              />
+            </div>
           </div>
 
-          <div>Contact</div>
-          <input type="text" id="emailInput" placeholder="Email" />
-          <input type="text" id="phoneInput" placeholder="Phone Number" />
+          <div class="formContactContainer">
+            <div>Contact</div>
+            <div class="formContactInputContainer">
+              <input
+                type="text"
+                class="signUpFormInput"
+                id="emailInput"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                class="signUpFormInput"
+                id="phoneInput"
+                placeholder="Phone Number"
+              />
+            </div>
+          </div>
 
-          <input type="password" placeholder="Password" class="error" />
-          <input type="password" placeholder="Confirm Password" class="error" />
+          <div class="formPasswordContainer">
+            <div>Password</div>
+            <div class="passwordContainer">
+              <input
+                type="password"
+                placeholder="Password"
+                class="signUpFormInput"
+                id="password"
+              />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="signUpFormInput"
+                id="confirmPassword"
+              />
+            </div>
+          </div>
+
           <button type="submit">Create Account</button>
 
           <p class="login-text">
             Already have an account? <a href="#">Log in</a>
           </p>
         </form>
-      </div>
-    </div>
 
-    <section class="signUpForm">
-      <h1>Join my <span class="heroName">team!</span></h1>
-      <p>Building our future one line of code at a time.</p>
-      <a href="#about" class="btn">Learn about me ((: </a>
-    </section>
+      </div>
+
+    </div>
   </body>
+  
 </html>
